@@ -1,0 +1,61 @@
+{
+  "corpus": {
+    "chunks": 1204,
+    "questions": 1000,
+    "dev_questions": 534,
+    "test_questions": 466
+  },
+  "latency_ms_per_query": {
+    "bm25": 4.49,
+    "dense": 2.35,
+    "hybrid": 7.09,
+    "hybrid+rerank": 655.49
+  },
+  "retrieval": {
+    "keyword only (BM25)": {
+      "recall@1": 0.8208,
+      "recall@3": 0.9,
+      "recall@5": 0.9292,
+      "recall@10": 0.9625,
+      "mrr@10": 0.8694,
+      "questions": 240
+    },
+    "embeddings only": {
+      "recall@1": 0.725,
+      "recall@3": 0.875,
+      "recall@5": 0.9333,
+      "recall@10": 0.9708,
+      "mrr@10": 0.8141,
+      "questions": 240
+    },
+    "hybrid (BM25 + embeddings, RRF)": {
+      "recall@1": 0.8292,
+      "recall@3": 0.9333,
+      "recall@5": 0.9625,
+      "recall@10": 0.9833,
+      "mrr@10": 0.8842,
+      "questions": 240
+    },
+    "hybrid + reranker": {
+      "recall@1": 0.8875,
+      "recall@3": 0.975,
+      "recall@5": 0.9792,
+      "recall@10": 0.9792,
+      "mrr@10": 0.9295,
+      "questions": 240
+    }
+  },
+  "notes": [],
+  "abstention_test": {
+    "threshold": 2.17,
+    "answer_rate_on_answerable": 0.7875,
+    "refusal_rate_on_unanswerable": 0.3673,
+    "balanced_accuracy": 0.5774,
+    "confidence_auroc": 0.6171,
+    "end_to_end_correct": 0.5408
+  },
+  "answer_sentence": {
+    "questions": 213,
+    "sentence_contains_gold_answer": 0.8545
+  }
+}

@@ -1,0 +1,5 @@
+__pycache__/
+.pytest_cache/
+data/cache/
+data/dev-v2.0.json
+eval.log
